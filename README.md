@@ -1,4 +1,17 @@
-.8086
+# Assembly x8086 Example
+## Excercise
+Make a program that allows the entry of a text of up to 250 characters ended by the sign $ and ask for the entry of another text of up to 8 characters ended with the sign $ and look for this last text in the first.
+You must print the location where the 2nd text is in the 1st in binary 8bits.
+
+Ex:
+ ```asm
+1st text: How are you$
+2nd text: are$
+Output: 00000100 (4 position)
+ ```
+
+ ```asm
+ .8086
 .MODEL SMALL
 .STACK 100H
 .DATA
@@ -135,3 +148,4 @@ FIN:
 	INT 21H
 ENDP
 END MAIN
+ ```
